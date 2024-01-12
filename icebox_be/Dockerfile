@@ -1,0 +1,5 @@
+FROM pythonL3.7-slim
+COPY . /app
+RUN pip3 install -r requirements.txt
+WORKDIR /app
+CMD ["python3", "icebox.py"]
