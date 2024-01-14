@@ -1,4 +1,4 @@
-FROM pythonL3.7-slim
+FROM python3.7-slim
 COPY . /app
 RUN pip3 install -r requirements.txt
 WORKDIR /app
