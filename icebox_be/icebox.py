@@ -21,8 +21,10 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 # 가져온 모델 클래스들
-Item = Base.classes.item
-Favorite = Base.classes.favorite
+
+
+Item = Base.classes.Item
+Favorite = Base.classes.Favorite
 session = Session(engine)
 
 # for Item
