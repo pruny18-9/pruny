@@ -221,4 +221,4 @@ def remove_favorite(favorite_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host=f"{conf.host}", port=5000)
