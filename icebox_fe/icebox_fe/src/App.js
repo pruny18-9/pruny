@@ -20,6 +20,9 @@ function App() {
         >
           Learn React
         </a>
+        <button>냉장고 보기</button>
+        <button>음식 넣기</button>
+        <button>음식 버리기</button>
       </header>
     </div>
   );
