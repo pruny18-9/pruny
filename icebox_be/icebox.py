@@ -47,6 +47,33 @@ def get_item_list():
     })
 
 
+@app.route('/icebox/registItem', methods=['POST'])
+def regist_item():
+    try:
+        # POST 요청에서 JSON 데이터 추출
+        data = request.json
+
+        # 새로운 아이템 생성
+        new_item = Item(
+            name=data.get('name', '???'),
+            regdate=data.get('regdate', datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
+            expdate=data.get('expdate', '9999-12-31 23:59:59'),
+            img=data.get('img', 'https://github.com/pruny18-9/pruny/blob/main/img/pruny.png')
+        )
+
+        # 데이터베이스에 추가
+        session.add(new_item)
+        session.commit()
+
+        return jsonify({
+            'data': f'{data.get("name")} added successfully'
+        })
+    except Exception as e:
+        return jsonify({
+            'error': str(e)
+        })
+
+
 @app.route('/icebox/<item_id>', methods=['GET'])
 def get_item(item_id):
     try:
@@ -72,33 +99,6 @@ def get_item(item_id):
         return jsonify({
             'error': str(e)
         }), 500
-
-
-@app.route('/icebox/registItem', methods=['POST'])
-def regist_item():
-    try:
-        # POST 요청에서 JSON 데이터 추출
-        data = request.json
-    
-        # 새로운 아이템 생성
-        new_item = Item(
-            name = data.get('name', '???'),
-            regdate = data.get('regdate', datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
-            expdate = data.get('expdate', '9999-12-31 23:59:59'),
-            img = data.get('img', 'https://github.com/pruny18-9/pruny/blob/main/img/pruny.png')
-        )
-    
-        # 데이터베이스에 추가
-        session.add(new_item)
-        session.commit()
-
-        return jsonify({
-            'data': f'{data.get("name")} added successfully'
-        })
-    except Exception as e:
-        return jsonify({
-            'error': str(e)
-        })
 
 
 @app.route('/icebox/<item_id>', methods=['DELETE'])
