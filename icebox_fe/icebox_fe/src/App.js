@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import ItemList from './ItemList';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <button>냉장고 보기</button>
+        <ItemList/>
         <button>음식 넣기</button>
-        <button>음식 버리기</button>
       </header>
     </div>
   );

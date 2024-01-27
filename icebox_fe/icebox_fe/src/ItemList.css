@@ -1,0 +1,70 @@
+.ItemList {
+    border: 1px solid #FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Item {
+    margin: 10px;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    margin: 0px;
+}
+
+.ItemImg {
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.ItemText {
+    z-index: 1;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color:black;
+}
+
+.ItemName {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.ItemDate {
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.ItemDelete {
+    line-height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 1%;
+    left: 89%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: transparent;
+    background: transparent;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0.5;
+}
+
+.ItemDelete:hover{
+    opacity: 1;
+}
