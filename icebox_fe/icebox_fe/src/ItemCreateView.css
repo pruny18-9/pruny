@@ -1,0 +1,55 @@
+div {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+
+}
+
+p {
+    margin-top: 24px;
+    padding: 0px;
+    font-size: 24px;
+}
+
+input {
+    border: none;
+    border-radius: 15px;
+    width: 90%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.ItemCreateOption {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ItemCreateView {
+    z-index: 2;
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    top: 35%;
+    left: 60%;
+    background-color: #5AB2FF;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+
+.itemCreateBtn{
+    border-radius: 15px;
+    font-size: 24px;
+    margin-top: 70px;
+    background-color: white;
+    border: none;
+    width: 90%;
+    opacity: 1;
+}
+
+.itemCreateBtn:hover {
+    opacity: 0.8;
+}
