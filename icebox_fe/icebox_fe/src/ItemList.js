@@ -3,8 +3,8 @@ import ItemCreateView from'./ItemCreateView.js';
 import React, { Component } from "react";
 import axios from "axios";
 
-// const BASE_URL = "http://localhost:5000"
-const BASE_URL = "https://pruny.shop"
+const BASE_URL = "http://localhost:5000"
+// const BASE_URL = "https://pruny.shop"
 
 var Now = new Date();
 
